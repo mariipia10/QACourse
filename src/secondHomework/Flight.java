@@ -2,7 +2,6 @@
  * 
  * 
  */
-
 package secondHomework;
 
 /**
@@ -10,6 +9,7 @@ package secondHomework;
  * @author piahe
  */
 public class Flight {
+
     private int number;
     private int arriveTime;
     private int departureTime;
@@ -28,7 +28,7 @@ public class Flight {
         return number;
     }
 
-    public void setNumber(int number) {
+    private void setNumber(int number) {
         this.number = number;
     }
 
@@ -36,7 +36,7 @@ public class Flight {
         return arriveTime;
     }
 
-    public void setArriveTime(int arriveTime) {
+    private void setArriveTime(int arriveTime) {
         this.arriveTime = arriveTime;
     }
 
@@ -44,7 +44,7 @@ public class Flight {
         return departureTime;
     }
 
-    public void setDepartureTime(int departureTime) {
+    private void setDepartureTime(int departureTime) {
         this.departureTime = departureTime;
     }
 
@@ -52,7 +52,7 @@ public class Flight {
         return airportArrival;
     }
 
-    public void setAirportArrival(Prices airportArrival) {
+    private void setAirportArrival(Prices airportArrival) {
         this.airportArrival = airportArrival;
     }
 
@@ -60,7 +60,7 @@ public class Flight {
         return airportDeparture;
     }
 
-    public void setAirportDeparture(Prices airportDeparture) {
+    private void setAirportDeparture(Prices airportDeparture) {
         this.airportDeparture = airportDeparture;
     }
 
@@ -68,11 +68,5 @@ public class Flight {
     public String toString() {
         return "Flight details:" + "number:" + number + ", arriveTime¨:" + arriveTime + ", departureTime:" + departureTime + ", airportArrival:" + airportArrival + ", airportDeparture:" + airportDeparture + '}';
     }
-    
-    
-    
-    
-    
-    
 
 }

@@ -2,7 +2,6 @@
  * 
  * 
  */
-
 package secondHomework;
 
 /**
@@ -10,6 +9,7 @@ package secondHomework;
  * @author piahe
  */
 public class Route {
+
     String fromCountry;
     String toCountry;
 
@@ -22,7 +22,7 @@ public class Route {
         return fromCountry;
     }
 
-    public void setFromCountry(String fromCountry) {
+    private void setFromCountry(String fromCountry) {
         this.fromCountry = fromCountry;
     }
 
@@ -30,9 +30,8 @@ public class Route {
         return toCountry;
     }
 
-    public void setToCountry(String toCountry) {
+    private void setToCountry(String toCountry) {
         this.toCountry = toCountry;
     }
-    
 
 }

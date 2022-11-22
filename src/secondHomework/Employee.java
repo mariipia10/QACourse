@@ -2,18 +2,18 @@
  * 
  * 
  */
-
 package secondHomework;
 
 /**
  *
  * @author piahe
  */
-public abstract class Employees {
+public abstract class Employee {
+
     private String surname;
     private Flight flight;
 
-    public Employees(String surname,Flight flight) {
+    public Employee(String surname, Flight flight) {
         this.surname = surname;
         setFlight(flight);
     }
@@ -25,15 +25,15 @@ public abstract class Employees {
     public void setSurname(String surname) {
         this.surname = surname;
     }
-    
-    public void setFlight(Flight flight){
+
+    public void setFlight(Flight flight) {
         this.flight = flight;
     }
 
     public Flight getFlight() {
         return flight;
     }
-    
+
     public abstract void startWorking();
 
 }

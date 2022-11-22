@@ -2,7 +2,6 @@
  * 
  * 
  */
-
 package secondHomework;
 
 /**
@@ -10,15 +9,32 @@ package secondHomework;
  * @author piahe
  */
 public class Ticket {
+
     int id;
     double price;
     Flight flight;
     Passanger passanger;
 
     public Ticket(int id, double price, Flight flight, Passanger passanger) {
+        setId(id);
+        setPrice(price);
+        setFlight(flight);
+        setPassanger(passanger);
+    }
+
+    private void setId(int id) {
         this.id = id;
+    }
+
+    private void setPrice(double price) {
         this.price = price;
+    }
+
+    private void setFlight(Flight flight) {
         this.flight = flight;
+    }
+
+    private void setPassanger(Passanger passanger) {
         this.passanger = passanger;
     }
 
@@ -26,34 +42,16 @@ public class Ticket {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public double getPrice() {
         return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     public Flight getFlight() {
         return flight;
     }
 
-    public void setFlight(Flight flight) {
-        this.flight = flight;
-    }
-
     public Passanger getPassanger() {
         return passanger;
     }
-
-    public void setPassanger(Passanger passanger) {
-        this.passanger = passanger;
-    }
-    
-    
 
 }

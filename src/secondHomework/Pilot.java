@@ -2,14 +2,13 @@
  * 
  * 
  */
-
 package secondHomework;
 
 /**
  *
  * @author piahe
  */
-public class Pilot extends Employees {
+public class Pilot extends Employee {
 
     public Pilot(String surname, Flight flight) {
         super(surname, flight);

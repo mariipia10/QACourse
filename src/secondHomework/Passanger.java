@@ -2,7 +2,6 @@
  * 
  * 
  */
-
 package secondHomework;
 
 /**
@@ -10,6 +9,7 @@ package secondHomework;
  * @author piahe
  */
 public class Passanger {
+
     String surname;
     String passport;
 
@@ -17,8 +17,5 @@ public class Passanger {
         this.surname = surname;
         this.passport = passport;
     }
-
-    
-    
 
 }
