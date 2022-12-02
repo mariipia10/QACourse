@@ -9,27 +9,25 @@ package secondHomework;
  * @author piahe
  */
 public class Flight {
-
-    private int number;
+    private FlightRoute flightRoute;
+    private int id;
     private int arriveTime;
     private int departureTime;
-    private Prices airportArrival;
-    private Prices airportDeparture;
-
-    public Flight(int number, int arriveTime, int departureTime, Prices airportArrival, Prices airportDeparture) {
-        setNumber(number);
-        setArriveTime(arriveTime);
-        setDepartureTime(departureTime);
-        setAirportArrival(airportArrival);
-        setAirportDeparture(airportDeparture);
+    private Airplane airplane;
+    private int availableSeats;
+    
+    public boolean hasCapacity(){
+        return availableSeats>=airplane.getCapacity();
+    }
+    public double getPrice(){
+        return flightRoute.getPrice();
+    }
+    public int getId() {
+        return id;
     }
 
-    public int getNumber() {
-        return number;
-    }
-
-    private void setNumber(int number) {
-        this.number = number;
+    private void setId(int id) {
+        this.id = id;
     }
 
     public int getArriveTime() {
@@ -48,25 +46,39 @@ public class Flight {
         this.departureTime = departureTime;
     }
 
-    public Prices getAirportArrival() {
-        return airportArrival;
-    }
 
-    private void setAirportArrival(Prices airportArrival) {
-        this.airportArrival = airportArrival;
-    }
+   
 
-    public Prices getAirportDeparture() {
-        return airportDeparture;
-    }
-
-    private void setAirportDeparture(Prices airportDeparture) {
-        this.airportDeparture = airportDeparture;
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 37 * hash + this.id;
+        hash = 37 * hash + this.arriveTime;
+        hash = 37 * hash + this.departureTime;
+        return hash;
     }
 
     @Override
-    public String toString() {
-        return "Flight details:" + "number:" + number + ", arriveTime¨:" + arriveTime + ", departureTime:" + departureTime + ", airportArrival:" + airportArrival + ", airportDeparture:" + airportDeparture + '}';
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Flight other = (Flight) obj;
+        if (this.id != other.id) {
+            return false;
+        }
+        if (this.arriveTime != other.arriveTime) {
+            return false;
+        }
+        return this.departureTime == other.departureTime;
     }
+    
+    
 
 }

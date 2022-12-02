@@ -8,14 +8,10 @@ package secondHomework;
  *
  * @author piahe
  */
-public class Airplane {
-
-    private int id;
-    private int capacity;
-
+public class Airplane extends Transport{
+    private final static int MAX_CAPACITY=150;
     public Airplane(int id, int capacity) {
-        this.id = id;
-        this.capacity = capacity;
+        super(MAX_CAPACITY, capacity);
     }
 
     public int getId() {
@@ -34,19 +30,11 @@ public class Airplane {
         this.capacity = capacity;
     }
 
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
+    
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public String toString() {
-        return "Airplanes{" + "id=" + id + ", capacity=" + capacity + '}';
+    public boolean hasCapacity() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

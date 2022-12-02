@@ -4,6 +4,9 @@
  */
 package secondHomework;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author piahe
@@ -11,14 +14,13 @@ package secondHomework;
 public class Ticket {
 
     int id;
-    double price;
-    Flight flight;
+    double totalPrice;
+    public List<Flight> flights;
     Passanger passanger;
-
+    boolean hasLayover;
     public Ticket(int id, double price, Flight flight, Passanger passanger) {
         setId(id);
-        setPrice(price);
-        setFlight(flight);
+        setTotalPrice(price);
         setPassanger(passanger);
     }
 
@@ -26,13 +28,15 @@ public class Ticket {
         this.id = id;
     }
 
-    private void setPrice(double price) {
-        this.price = price;
+    private void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
-    private void setFlight(Flight flight) {
-        this.flight = flight;
+    public void setFlights(List<Flight> flights) {
+        this.flights = flights;
     }
+
+    
 
     private void setPassanger(Passanger passanger) {
         this.passanger = passanger;
@@ -42,13 +46,10 @@ public class Ticket {
         return id;
     }
 
-    public double getPrice() {
-        return price;
+    public double getTotalPrice() {
+        return totalPrice;
     }
 
-    public Flight getFlight() {
-        return flight;
-    }
 
     public Passanger getPassanger() {
         return passanger;

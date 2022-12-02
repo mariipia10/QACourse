@@ -8,12 +8,13 @@ package secondHomework;
  *
  * @author piahe
  */
-public class Route {
+public class FlightRoute {
 
     String fromCountry;
     String toCountry;
-
-    public Route(String fromCountry, String toCountry) {
+    Double price;
+    
+    public FlightRoute(String fromCountry, String toCountry) {
         setFromCountry(fromCountry);
         setToCountry(toCountry);
     }
@@ -28,6 +29,14 @@ public class Route {
 
     public String getToCountry() {
         return toCountry;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     private void setToCountry(String toCountry) {
