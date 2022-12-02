@@ -13,7 +13,7 @@ public abstract class Transport {
     int id;
     int capacity;
 
-    public abstract boolean hasCapacity();
+    public abstract int getCapacity();
     public Transport(int id, int capacity) {
         this.id = id;
         this.capacity = capacity;

@@ -14,27 +14,11 @@ public class Airplane extends Transport{
         super(MAX_CAPACITY, capacity);
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    
-
     @Override
-    public boolean hasCapacity() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public int getCapacity() {
+        return this.capacity;
     }
+
+   
 
 }
