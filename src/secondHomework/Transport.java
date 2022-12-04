@@ -10,10 +10,18 @@ package secondHomework;
  * @author piahe
  */
 public abstract class Transport {
-    int id;
-    int capacity;
+    private int id;
+    private int capacity;
 
-    public abstract int getCapacity();
+    public int getCapacity(){
+        return this.capacity;
+    };
+    public int getId(){
+        return this.id;
+    }
+    public void setId(Integer id){
+        this.id = id; 
+    }
     public Transport(int id, int capacity) {
         this.id = id;
         this.capacity = capacity;

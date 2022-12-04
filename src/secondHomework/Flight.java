@@ -8,26 +8,30 @@ package secondHomework;
  *
  * @author piahe
  */
-public class Flight {
+public class Flight implements Identifiable<Integer> {
+
     private FlightRoute flightRoute;
     private int id;
     private int arriveTime;
     private int departureTime;
     private Airplane airplane;
     private int availableSeats;
-    
-    public boolean hasCapacity(){
-        return availableSeats>=airplane.getCapacity();
-    }
-    public double getPrice(){
-        return flightRoute.getPrice();
-    }
-    public int getId() {
-        return id;
+
+    public Flight(FlightRoute flightRoute, int id, int arriveTime, int departureTime, Airplane airplane, int availableSeats) {
+        this.flightRoute = flightRoute;
+        this.id = id;
+        this.arriveTime = arriveTime;
+        this.departureTime = departureTime;
+        this.airplane = airplane;
+        this.availableSeats = availableSeats;
     }
 
-    private void setId(int id) {
-        this.id = id;
+    public boolean hasCapacity() {
+        return availableSeats >= airplane.getCapacity();
+    }
+
+    public double getPrice() {
+        return flightRoute.getPrice();
     }
 
     public int getArriveTime() {
@@ -45,9 +49,6 @@ public class Flight {
     private void setDepartureTime(int departureTime) {
         this.departureTime = departureTime;
     }
-
-
-   
 
     @Override
     public int hashCode() {
@@ -78,7 +79,15 @@ public class Flight {
         }
         return this.departureTime == other.departureTime;
     }
-    
-    
+
+    @Override
+    public Integer getID() {
+        return this.id;
+    }
+
+    @Override
+    public void setID(Integer x) {
+        this.id = x;
+    }
 
 }

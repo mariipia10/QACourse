@@ -11,21 +11,18 @@ import java.util.List;
  *
  * @author piahe
  */
-public class Ticket {
+public class Ticket implements Identifiable<Integer> {
 
-    int id;
-    double totalPrice;
-    public List<Flight> flights;
-    Passanger passanger;
-    boolean hasLayover;
+    private int id;
+    private double totalPrice;
+    private List<Flight> flights;
+    private Passanger passanger;
+    private boolean hasLayover;
+
     public Ticket(int id, double price, Flight flight, Passanger passanger) {
-        setId(id);
+        setID(id);
         setTotalPrice(price);
         setPassanger(passanger);
-    }
-
-    private void setId(int id) {
-        this.id = id;
     }
 
     private void setTotalPrice(double totalPrice) {
@@ -36,23 +33,26 @@ public class Ticket {
         this.flights = flights;
     }
 
-    
-
     private void setPassanger(Passanger passanger) {
         this.passanger = passanger;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public double getTotalPrice() {
         return totalPrice;
     }
 
-
     public Passanger getPassanger() {
         return passanger;
+    }
+
+    @Override
+    public Integer getID() {
+        return this.id;
+    }
+
+    @Override
+    public void setID(Integer x) {
+        this.id = x;
     }
 
 }

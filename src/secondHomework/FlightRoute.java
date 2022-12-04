@@ -10,9 +10,9 @@ package secondHomework;
  */
 public class FlightRoute {
 
-    String fromCountry;
-    String toCountry;
-    Double price;
+    private String fromCountry;
+    private String toCountry;
+    private Double price;
     
     public FlightRoute(String fromCountry, String toCountry) {
         setFromCountry(fromCountry);
