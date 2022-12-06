@@ -4,6 +4,10 @@
  */
 package secondHomework;
 
+import java.util.ArrayList;
+import java.util.List;
+import secondHomework.interfacebla.Identifiable;
+
 /**
  *
  * @author piahe
@@ -17,6 +21,7 @@ public class Flight implements Identifiable<Integer> {
     private Airplane airplane;
     private int availableSeats;
 
+    private List<Passanger> passangers;
     public Flight(FlightRoute flightRoute, int id, int arriveTime, int departureTime, Airplane airplane, int availableSeats) {
         this.flightRoute = flightRoute;
         this.id = id;
@@ -24,15 +29,17 @@ public class Flight implements Identifiable<Integer> {
         this.departureTime = departureTime;
         this.airplane = airplane;
         this.availableSeats = availableSeats;
+        this.passangers = new ArrayList<>();
     }
-
+    
+    public void addPassanger(Passanger p){
+        this.passangers.add(p);
+    }
     public boolean hasCapacity() {
         return availableSeats >= airplane.getCapacity();
     }
 
-    public double getPrice() {
-        return flightRoute.getPrice();
-    }
+    
 
     public int getArriveTime() {
         return arriveTime;
@@ -90,4 +97,7 @@ public class Flight implements Identifiable<Integer> {
         this.id = x;
     }
 
+    public boolean compareFlightRoute(String from, String to){
+        return flightRoute.getToCountry()==to && flightRoute.getFromCountry()==from;
+    }
 }

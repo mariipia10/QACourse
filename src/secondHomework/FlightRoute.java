@@ -4,6 +4,9 @@
  */
 package secondHomework;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author piahe
@@ -12,11 +15,14 @@ public class FlightRoute {
 
     private String fromCountry;
     private String toCountry;
-    private Double price;
+    private boolean hasLayovers;
+    private List<String> layovers;
     
-    public FlightRoute(String fromCountry, String toCountry) {
+    public FlightRoute(String fromCountry, String toCountry, boolean hasLayovers) {
         setFromCountry(fromCountry);
         setToCountry(toCountry);
+        this.hasLayovers = hasLayovers;
+        this.layovers = new ArrayList<>();
     }
 
     public String getFromCountry() {
@@ -31,13 +37,23 @@ public class FlightRoute {
         return toCountry;
     }
 
-    public Double getPrice() {
-        return price;
+    public boolean isHasLayovers() {
+        return hasLayovers;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setHasLayovers(boolean hasLayovers) {
+        this.hasLayovers = hasLayovers;
     }
+
+    public List<String> getLayovers() {
+        return layovers;
+    }
+
+    public void addLayover(String country) {
+        this.layovers.add(country);
+    }
+
+    
 
     private void setToCountry(String toCountry) {
         this.toCountry = toCountry;

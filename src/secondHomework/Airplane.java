@@ -4,6 +4,8 @@
  */
 package secondHomework;
 
+import secondHomework.interfacebla.Identifiable;
+
 /**
  *
  * @author piahe
