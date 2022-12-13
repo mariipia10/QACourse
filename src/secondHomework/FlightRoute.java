@@ -59,4 +59,9 @@ public class FlightRoute {
         this.toCountry = toCountry;
     }
 
+    @Override
+    public String toString() {
+        return "FlightRoute{" + "fromCountry=" + fromCountry + ", toCountry=" + toCountry + ", hasLayovers=" + hasLayovers + ", layovers=" + layovers + '}';
+    }
+    
 }

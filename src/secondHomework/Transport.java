@@ -26,6 +26,11 @@ public abstract class Transport {
         this.id = id;
         this.capacity = capacity;
     }
+
+    @Override
+    public String toString() {
+        return "Transport{" + "id=" + id + ", capacity=" + capacity + '}';
+    }
     
     
     

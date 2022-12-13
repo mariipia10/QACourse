@@ -56,4 +56,9 @@ public class Ticket implements Identifiable<Integer> {
         this.id = x;
     }
 
+    @Override
+    public String toString() {
+        return "Ticket{" + "id=" + id + ", totalPrice=" + totalPrice + ", flights=" + flights + ", passanger=" + passanger + ", hasLayover=" + hasLayover + '}';
+    }
+
 }

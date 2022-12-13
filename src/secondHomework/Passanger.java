@@ -31,4 +31,9 @@ public final class Passanger implements Identifiable<String> {
         this.passport = x;
     }
 
+    @Override
+    public String toString() {
+        return "Passanger{" + "name=" + name + ", surname=" + surname + ", passport=" + passport + '}';
+    }
+
 }

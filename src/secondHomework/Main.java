@@ -22,5 +22,10 @@ public class Main {
     Flight fl1 = new Flight(fr4, 1, 2054, 0205, new Airplane(2, 100), 50);
     Airport ezeiza = new Airport();
     ezeiza.addFlight(fl1);
+    
+    ezeiza.showFlights();
+    //Search tickets
+    //Buy ticket
+    //See available flights
     }
 }

@@ -16,7 +16,7 @@ public class Flight implements Identifiable<Integer> {
 
     private FlightRoute flightRoute;
     private int id;
-    private int arriveTime;
+    private int arriveTime; //Future refactor into LocalDate!
     private int departureTime;
     private Airplane airplane;
     private int availableSeats;
@@ -100,4 +100,10 @@ public class Flight implements Identifiable<Integer> {
     public boolean compareFlightRoute(String from, String to){
         return flightRoute.getToCountry()==to && flightRoute.getFromCountry()==from;
     }
+
+    @Override
+    public String toString() {
+        return "Flight{" + "flightRoute=" + flightRoute + ", id=" + id + ", arriveTime=" + arriveTime + ", departureTime=" + departureTime + ", airplane=" + airplane + ", availableSeats=" + availableSeats + ", passangers=" + passangers + '}';
+    }
+    
 }
